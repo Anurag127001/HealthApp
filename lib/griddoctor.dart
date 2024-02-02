@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:healthapp/newuser.dart';
 class Griddoctor extends StatelessWidget {
   Griddoctor({Key? key});
 
@@ -23,7 +24,12 @@ class Griddoctor extends StatelessWidget {
 
                   InkWell(
                     onTap: () {
-                      print("hello yash");
+                      if(i==0){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) {
+                          return Newuser();
+                        }));
+                      }
+
                     },
 
                     child: Image.asset(
